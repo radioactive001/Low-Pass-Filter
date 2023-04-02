@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dI:/My Drive/FPGA/Low_Pass_Filter/simulation/modelsim
 Elow_pass_filter
-Z1 w1680277785
+Z1 w1680408329
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -23,9 +23,9 @@ V3?GF9DcKV=LRCAaI?7ha:0
 !s100 WDeG<@8zWX]4E;U`SWm:f2
 Z8 OV;C;10.5b;63
 31
-Z9 !s110 1680279210
+Z9 !s110 1680408753
 !i10b 1
-Z10 !s108 1680279210.000000
+Z10 !s108 1680408753.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|I:/My Drive/FPGA/Low_Pass_Filter/Low_Pass_Filter.vhd|
 Z12 !s107 I:/My Drive/FPGA/Low_Pass_Filter/Low_Pass_Filter.vhd|
 !i113 1
@@ -37,10 +37,10 @@ R3
 R4
 R5
 DEx4 work 15 low_pass_filter 0 22 3?GF9DcKV=LRCAaI?7ha:0
-l61
+l46
 L17
-V:4hEAbC6UMhBA[4ccSlFH0
-!s100 gLRlAb_F93:iR09Qi6JHi3
+V3>kXC_c?c]AA143M:6>fV3
+!s100 Ag[OfhB8^:Zek_Q>W]Vz70
 R8
 31
 R9
@@ -52,7 +52,7 @@ R12
 R13
 R14
 En_bit_register
-Z15 w1680232930
+Z15 w1680408343
 R3
 R4
 R0
@@ -64,11 +64,11 @@ VYP?DHK>7Q645k^TfGACPn2
 !s100 9Xle>f:8S1kC2nYj0:1X:0
 R8
 31
-R9
+Z18 !s110 1680408754
 !i10b 1
 R10
-Z18 !s90 -reportprogress|300|-93|-work|work|I:/My Drive/FPGA/Low_Pass_Filter/N_Bit_Register.vhd|
-Z19 !s107 I:/My Drive/FPGA/Low_Pass_Filter/N_Bit_Register.vhd|
+Z19 !s90 -reportprogress|300|-93|-work|work|I:/My Drive/FPGA/Low_Pass_Filter/N_Bit_Register.vhd|
+Z20 !s107 I:/My Drive/FPGA/Low_Pass_Filter/N_Bit_Register.vhd|
 !i113 1
 R13
 R14
@@ -82,38 +82,38 @@ VOMC;HmG^33h=CSV4g;2:30
 !s100 jT;cO>VP8LZZa04:LKlKF2
 R8
 31
-R9
+R18
 !i10b 1
 R10
-R18
 R19
+R20
 !i113 1
 R13
 R14
 Etest_low_pass_filter
-Z20 w1680279027
-Z21 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z21 w1680408362
+Z22 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R4
 R3
 R0
-Z22 8I:/My Drive/FPGA/Low_Pass_Filter/Test_Low_Pass_Filter.vhd
-Z23 FI:/My Drive/FPGA/Low_Pass_Filter/Test_Low_Pass_Filter.vhd
+Z23 8I:/My Drive/FPGA/Low_Pass_Filter/Test_Low_Pass_Filter.vhd
+Z24 FI:/My Drive/FPGA/Low_Pass_Filter/Test_Low_Pass_Filter.vhd
 l0
 L13
 Vz7Dh4^KiBS^f9::>LE38Z2
 !s100 mL;9[QVQIa[zA1ZJga_FH1
 R8
 31
-R9
+R18
 !i10b 1
-R10
-Z24 !s90 -reportprogress|300|-93|-work|work|I:/My Drive/FPGA/Low_Pass_Filter/Test_Low_Pass_Filter.vhd|
-Z25 !s107 I:/My Drive/FPGA/Low_Pass_Filter/Test_Low_Pass_Filter.vhd|
+Z25 !s108 1680408754.000000
+Z26 !s90 -reportprogress|300|-93|-work|work|I:/My Drive/FPGA/Low_Pass_Filter/Test_Low_Pass_Filter.vhd|
+Z27 !s107 I:/My Drive/FPGA/Low_Pass_Filter/Test_Low_Pass_Filter.vhd|
 !i113 1
 R13
 R14
 Abehaviour
-R21
+R22
 R4
 R3
 DEx4 work 20 test_low_pass_filter 0 22 z7Dh4^KiBS^f9::>LE38Z2
@@ -123,11 +123,11 @@ V:SbL2lGiPgg:gn5UJ7B?X3
 !s100 jJ3moJfnDjLiJM3e7e_IH1
 R8
 31
-R9
+R18
 !i10b 1
-R10
-R24
 R25
+R26
+R27
 !i113 1
 R13
 R14

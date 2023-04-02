@@ -1,4 +1,4 @@
-Fitter Status : Successful - Fri Mar 31 13:41:47 2023
+Fitter Status : Successful - Sun Apr  2 01:54:53 2023
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : Low_Pass_Filter
 Top-level Entity Name : Low_Pass_Filter
@@ -6,7 +6,7 @@ Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
 Logic utilization (in ALMs) : 95 / 41,910 ( < 1 % )
-Total registers : 93
+Total registers : 99
 Total pins : 26 / 499 ( 5 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )

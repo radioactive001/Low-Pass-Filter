@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Low_Pass_Filter
-Fri Mar 31 13:40:48 2023
+Sun Apr  2 01:54:02 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 31 13:40:48 2023       ;
+; Analysis & Synthesis Status     ; Successful - Sun Apr  2 01:54:02 2023       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; Low_Pass_Filter                             ;
 ; Top-level Entity Name           ; Low_Pass_Filter                             ;
@@ -189,31 +189,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 108         ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 189         ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 0           ;
-;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 189         ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 80          ;
-;                                             ;             ;
-; I/O pins                                    ; 26          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 3           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 80          ;
-; Total fan-out                               ; 872         ;
-; Average fan-out                             ; 2.69        ;
-+---------------------------------------------+-------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 108            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 189            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 0              ;
+;     -- 5 input functions                    ; 0              ;
+;     -- 4 input functions                    ; 0              ;
+;     -- <=3 input functions                  ; 189            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 80             ;
+;                                             ;                ;
+; I/O pins                                    ; 26             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 3              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 80             ;
+; Total fan-out                               ; 872            ;
+; Average fan-out                             ; 2.69           ;
++---------------------------------------------+----------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -418,7 +418,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Mar 31 13:40:30 2023
+    Info: Processing started: Sun Apr  2 01:53:46 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Low_Pass_Filter -c Low_Pass_Filter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -432,7 +432,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file n_bit_r
     Info (12022): Found design unit 1: N_Bit_Register-behavioral File: I:/My Drive/FPGA/Low_Pass_Filter/N_Bit_Register.vhd Line: 11
     Info (12023): Found entity 1: N_Bit_Register File: I:/My Drive/FPGA/Low_Pass_Filter/N_Bit_Register.vhd Line: 4
 Info (12127): Elaborating entity "Low_Pass_Filter" for the top level hierarchy
-Info (12128): Elaborating entity "N_Bit_Register" for hierarchy "N_Bit_Register:\Lowpass:0:N_Bit_Register_unit" File: I:/My Drive/FPGA/Low_Pass_Filter/Low_Pass_Filter.vhd Line: 68
+Info (12128): Elaborating entity "N_Bit_Register" for hierarchy "N_Bit_Register:\Lowpass:0:N_Bit_Register_unit" File: I:/My Drive/FPGA/Low_Pass_Filter/Low_Pass_Filter.vhd Line: 53
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -442,9 +442,9 @@ Info (21057): Implemented 298 device resources after synthesis - the final resou
     Info (21061): Implemented 269 logic cells
     Info (21062): Implemented 3 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4894 megabytes
-    Info: Processing ended: Fri Mar 31 13:40:48 2023
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 4887 megabytes
+    Info: Processing ended: Sun Apr  2 01:54:02 2023
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:32
 
 

@@ -2,20 +2,20 @@
  use ieee.Std_logic_1164.all;  
  
  entity N_Bit_Register is generic (input_w          : integer     :=8);  
-								  port    (input 						 : in  std_logic_vector(input_w-1 downto 0);    
-											  clock 						 : in  std_logic;    
-											  reset 						 : in  std_logic;  
-					 						  output  					 : out  std_logic_vector(input_w-1 downto 0));  
+								  port    (SW 						 : in  std_logic_vector(input_w-1 downto 0);    
+											  CLOCK_50 						 : in  std_logic;    
+											  KEY0 						 : in  std_logic;  
+					 						  LEDR  					 : out  std_logic_vector(input_w-1 downto 0));  
  end N_Bit_Register;  
   
  architecture behavioral of N_Bit_Register is   
  begin   
-      process(clock,reset)  
+      process(CLOCK_50,KEY0)  
       begin   
-           if (reset = '1') then  
-                output <= (others => '0');  
-        elsif ( rising_edge(clock) ) then  
-                output <= input;   
+           if (KEY0 = '1') then  
+                LEDR <= (others => '0');  
+        elsif ( rising_edge(CLOCK_50) ) then  
+                LEDR <= SW;   
        end if;      
       end process;   
  end Behavioral;
