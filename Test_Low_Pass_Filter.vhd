@@ -21,17 +21,17 @@ component Low_Pass_Filter is generic ( input_w 	     : integer;
 													guard			  : integer;
 													tap			  : integer;
 													coefficient_w : integer);
-									  port	  (input			  : in std_logic_vector(input_w-1 downto 0);
-													clock			  : in std_logic;
-													reset			  : in std_logic;
-													output		  : out std_logic_vector(output_w-1 downto 0));
+									  port	  (SW			  : in std_logic_vector(input_w-1 downto 0);
+													CLOCK_50			  : in std_logic;
+													KEY0			  : in std_logic;
+													LEDR		  : out std_logic_vector(output_w-1 downto 0));
 end component;
 
 --Signals for simulated outputs
-signal input          		: std_logic_vector(7 downto 0);  
-signal clock          		: std_logic:='0';  
-signal reset     	  			: std_logic:='1';                                       
-signal output          		: std_logic_vector(15 downto 0);  
+signal SW          		: std_logic_vector(7 downto 0);  
+signal CLOCK_50          		: std_logic:='0';  
+signal KEY0     	  			: std_logic:='1';                                       
+signal LEDR          		: std_logic_vector(15 downto 0);  
 signal output_ready     	: std_logic:='0';
 
 
@@ -56,31 +56,31 @@ begin
 										 guard			  => 0,
 										 tap			     => 11,
 										 coefficient_w   => 8)
-							port	map(input			  => input,
-										 clock			  => clock,
-										 reset			  => reset,
-										 output		     => output);
+							port	map(SW			  => SW,
+										 CLOCK_50			  => CLOCK_50,
+										 KEY0			  => KEY0,
+										 LEDR		     => LEDR);
 										 
-process(clock)
+process(CLOCK_50)
   begin
-		clock <= not clock after 10ns;
+		CLOCK_50 <= not CLOCK_50 after 10ns;
   end process;
   
-reset <= '1', '0' after 505 ns;
+KEY0 <= '1', '0' after 505 ns;
 
 --Read Inputs or decide if input finished.
-process(clock)	
+process(CLOCK_50)	
 	variable input_line  : line;
 	variable input_value	: integer;
 	
 	begin
-		if reset = '1' then 
-			input <= (others => '0');
+		if KEY0 = '1' then 
+			SW <= (others => '0');
 			output_ready <= '0';
-		elsif rising_edge(clock) and (not endfile(input_file)) then 
+		elsif rising_edge(CLOCK_50) and (not endfile(input_file)) then 
 			 readline(input_file, input_line); 
 			 read(input_line,input_value);
-			 input <= std_logic_vector(to_signed(input_value, 8)); 
+			 SW <= std_logic_vector(to_signed(input_value, 8)); 
 			 output_ready <= '1';
 		elsif endfile(input_file) then
 			--assert FALSE Report "SImulation Finished" severity FAILURE;
@@ -88,14 +88,14 @@ process(clock)
 		end if;
 end process;	
 --Write outputs and match expected output.
-process(clock)  
+process(CLOCK_50)  
            variable output_line           : line;
 			  variable expected_output_line  : line;
 			  variable expected_output_value	: integer;  
            begin  
-                if falling_edge(clock) then  
+                if falling_edge(CLOCK_50) then  
                      if output_ready ='1' then  
-                          write(output_line, to_integer(signed(output)));  
+                          write(output_line, to_integer(signed(LEDR)));  
                           writeline(output_file,output_line);
 								 if (not endfile(expected_output_file)) then 
 										readline(expected_output_file, expected_output_line);
